@@ -1,7 +1,7 @@
 # First_Project_MLE_Predict_Mark
 
 ### Software  And Tools Requirements 
-#### *Note: Because I have no the account on Heroku, I can't  deploy the entire process. This is a first way to graduatelly understand everything about Machine Learning Engineering
+#### *Note: Because I have no the account on Heroku, I can't  deploy the entire process. This is a first way for me to graduatelly understand everything about Machine Learning Engineering
 
 1. [Github Account](https://github.com)
 2. [HerokuAccount](https://heroku.com)
