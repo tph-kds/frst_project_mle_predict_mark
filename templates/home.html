@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    :root {
+    --main-color:#8B008B;
+    --white-color : #fff;
+    --black-color:#333;
+    --header-height:120px;
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: -webkit-radial-gradient(bottom , rgb(5 248 245) ,rgb(72 13 68));
+}
+.frame {
+    position: relative;
+    padding: 150px 100px;
+}
+.frame h1 {
+    padding: 20px;
+    margin-left:  120px;
+    color: cornsilk;
+    background: mediumvioletred;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-color: rgb(255 ,  214 ,  0);
+    border-style: groove;
+}
+
+.frame form {
+    position: absolute;
+    margin: 10%;
+    /* background:-webkit-repeating-radial-gradient(rgb(157, 4, 4) , rgb(157, 132, 4) ); */
+}
+.input_btn {
+    display: block;
+    padding: 20px ;
+    margin: -5px 70px 20px 70px;
+    width: 50rem;
+    border-radius: 12px;
+    border-color: var(--main-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 12px;
+}
+
+.btn_predict {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 30px;
+    align-items: center;
+    right: 0;
+    left: 40%;
+    font-size: 22px;
+    font-weight: 500;
+    background: white;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 28px;
+}
+
+.btn_predict:hover {
+    background:-webkit-linear-gradient(left , rgb(22, 245, 208) , rgb(226, 17, 17) );
+    cursor: pointer;
+}
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    
+    <title>PREDICT MARK</title>
+</head>
+<body>
+    <div class="login" >
+        <div class="frame">
+
+            <h1> This WebSite is created to predict the mark of the primary student</h1>
+        
+            <form action="{{url_for('predict')}}" method="post" class= "form_main">
+                <input class = "input_btn" type="number" name="Id" placeholder="ID" required = "required" />
+                <input class = "input_btn" type="search" name="full_names" placeholder="Full Names" required = "required" />         
+                <input class = "input_btn" type="number" name="claass" placeholder="Class" required = "required" />
+    
+                <button class="btn_predict" type="submit">Predict</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
