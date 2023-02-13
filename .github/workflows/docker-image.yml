@@ -43,7 +43,7 @@ jobs:
         file: ./Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/First_Project_MLE_Predict_Mark
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/frst_project_mle_predict_mark
         cache-from: type=local , src=/tmp/.buildx-cache
         cache-to: type=local , dest=/tmp/.buildx-cache
         
