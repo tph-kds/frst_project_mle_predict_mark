@@ -44,8 +44,8 @@ jobs:
         builder: ${{ steps.buildx.outputs.name }}
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/frst_project_mle_predict_mark
-        cache-from: type=local , src=/tmp/.buildx-cache
-        cache-to: type=local , dest=/tmp/.buildx-cache
+        cache-from: type=local,src=/tmp/.buildx-cache
+        cache-to: type=local,dest=/tmp/.buildx-cache
         
     - name: Vertify
       run : echo ${{ steps.docker_build.outputs.digest }}
